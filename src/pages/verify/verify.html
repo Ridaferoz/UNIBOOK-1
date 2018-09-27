@@ -1,0 +1,21 @@
+<!--
+  Generated template for the VerifyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>verify</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button block (click)="send()">SEND OTP</button>
+    <ion-input type="text"placeholder="enter opt"[(ngModel)]="code"></ion-input>
+    <button ion-button block (click)="verify()">verify</button>
+
+</ion-content>

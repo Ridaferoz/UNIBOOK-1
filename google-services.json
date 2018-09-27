@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "792049605398",
+    "firebase_url": "https://verification-57410.firebaseio.com",
+    "project_id": "verification-57410",
+    "storage_bucket": "verification-57410.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792049605398:android:197fcf40083f25f7",
+        "android_client_info": {
+          "package_name": "com.rida.sms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792049605398-img6g6l6ubvakoj1gn8rht8ue7kneldm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBz4RvMvMUZZgENTXlJtAUERFhz3Qjg6g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

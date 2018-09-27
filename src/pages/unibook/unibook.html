@@ -1,0 +1,54 @@
+<!--
+  Generated template for the UnibookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>UNIBOOK</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+
+<ion-content class="card-background-page">
+  
+  <ion-item>
+      <ion-input type="text" placeholder="First Name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Last Name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder="Email Address"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="Mobile No."></ion-input>
+          </ion-item>
+
+        
+      
+      
+          <ion-item>
+          <ion-label>COUNTRY</ion-label>
+          <ion-select [(ngModel)]="gaming">
+            <ion-option value="ai">Pakistan</ion-option>
+            <ion-option value="np">China</ion-option>
+            <ion-option value="os">America</ion-option>
+            <ion-option value="stats">England</ion-option>
+            
+          </ion-select>
+        </ion-item>
+
+      
+        <button ion-button color="secondary" secondary round (click)='load2()' >Verify</button>
+  
+</ion-content>
+
+
+
+
+
+  
