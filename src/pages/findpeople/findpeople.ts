@@ -54,7 +54,7 @@ export class FindpeoplePage {
   }
 
   removeStudent(studentId: string){
-    alert("delete Student");
+    alert("delete Student");  
     //this.items.remove(studentId);
   }
 

@@ -31,6 +31,7 @@ export class UnibookPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public atrCtrl: AlertController, afDatabase: AngularFireDatabase) {
 
     this.students = afDatabase.list('/students');
+      
   }
   addStudent(){
     const studentRef = this.students.push({});
