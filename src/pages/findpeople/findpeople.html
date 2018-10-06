@@ -55,22 +55,29 @@
           </ion-list>
       
       <ion-list>
-          <ion-item>
+          <ion-item *ngFor="let student of items | async" (click)="showOptions(student.id, student.name)" >
             <ion-list>
               <ion-item>
                 <ion-avatar item-start>
                   <img src="../assets/th.jpg">
-                </ion-avatar>
-                
-                <h3>XYZ</h3>
-                
+                </ion-avatar> 
               </ion-item>
-            </ion-list>
+            <ion-item>
+                <h1>{{student.name}}</h1>
+            </ion-item>
+              </ion-list>
           </ion-item>
-        </ion-list>   
+               
+            </ion-list>
+            
+          
 
-
-        <ion-list>
+        <!-- <ul>
+          <li class="text" *ngFor="let student of items | async">
+            {{student}} <br>
+          </li>
+        </ul> -->
+        <!-- <ion-list>
             <ion-item>
               <ion-list>
                 <ion-item>
@@ -100,7 +107,7 @@
                   </ion-item>
                 </ion-list>
               </ion-item>
-            </ion-list>
+            </ion-list> -->
 
      
             

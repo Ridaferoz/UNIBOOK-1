@@ -19,7 +19,7 @@ import { StdhomePage } from '../stdhome/stdhome';
 export class NotificationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(navParams.get('val')); }
+  }
   
 
     load(){
@@ -42,8 +42,6 @@ export class NotificationPage {
       val: 'hello'
     })
     }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NotificationPage');
-  }
+  
 
 }

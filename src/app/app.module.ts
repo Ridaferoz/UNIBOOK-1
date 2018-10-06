@@ -15,16 +15,18 @@ import { ThomePage } from '../pages/thome/thome';
 import { TunibookPage } from '../pages/tunibook/tunibook';
 import { AdunibookPage } from '../pages/adunibook/adunibook';
 import { UploadPage } from '../pages/upload/upload';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { TfriendPage } from '../pages/tfriend/tfriend';
 import { TmsgPage } from '../pages/tmsg/tmsg';
 import { VerifyPage } from '../pages/verify/verify';
 import {  FindpeoplePage } from '../pages/findpeople/findpeople';
 import {NotificationPage} from '../pages/notification/notification';
-import * as firebase from 'firebase';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { WelcomePage } from '../pages/welcome/welcome';
-
-firebase.initializeApp({
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule, AngularFirestore, } from 'angularfire2/firestore';
+export const firebaseConfig ={
   
     
       apiKey: "AIzaSyDHA1XTaskgv9a1YhiHKli6trJhmyYkOTk",
@@ -33,7 +35,7 @@ firebase.initializeApp({
       projectId: "verify-18394",
       storageBucket: "verify-18394.appspot.com",
       messagingSenderId: "362913438877"
-});
+};
 
 @NgModule({
   declarations: [
@@ -58,7 +60,10 @@ firebase.initializeApp({
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    AngularFireAuthModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -84,6 +89,7 @@ firebase.initializeApp({
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFirestore,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

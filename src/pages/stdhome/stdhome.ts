@@ -23,9 +23,6 @@ import { SchedulePage } from '../schedule/schedule';
 export class StdhomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public atrCtrl: AlertController) {
-    
-    console.log(navParams.get('val'));
-
    
 
   }
@@ -131,9 +128,5 @@ load7(){
     val: 'hello'
   })
 }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StdhomePage');
-  }
 
 }

@@ -20,7 +20,6 @@ import { AdunibookPage } from '../adunibook/adunibook';
 export class RolePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(navParams.get('val'));
   }
 
   load(){
@@ -40,9 +39,5 @@ export class RolePage {
   }
 
     
-  
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RolePage');
-  }
 
 }

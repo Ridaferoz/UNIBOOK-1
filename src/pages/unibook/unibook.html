@@ -13,19 +13,19 @@
   </ion-header>
   
 
-<ion-content class="card-background-page">
+<ion-content class="card-background-page" >
   
   <ion-item>
-      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="First Name" [(ngModel)]="name" ></ion-input>
     </ion-item>
     <ion-item>
-        <ion-input type="text" placeholder="Last Name"></ion-input>
+        <ion-input type="text" placeholder="Last Name" [(ngModel)]="lastName"></ion-input>
       </ion-item>
       <ion-item>
-          <ion-input type="text" placeholder="Email Address"></ion-input>
+          <ion-input type="text" placeholder="Email Address" [(ngModel)]="email" ></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input type="text" placeholder="Mobile No."></ion-input>
+            <ion-input type="text" placeholder="Mobile No." [(ngModel)]="mobile" ></ion-input>
           </ion-item>
 
         
@@ -34,16 +34,16 @@
           <ion-item>
           <ion-label>COUNTRY</ion-label>
           <ion-select [(ngModel)]="gaming">
-            <ion-option value="ai">Pakistan</ion-option>
-            <ion-option value="np">China</ion-option>
-            <ion-option value="os">America</ion-option>
-            <ion-option value="stats">England</ion-option>
+            <ion-option value="Pakistan">Pakistan</ion-option>
+            <ion-option value="China">China</ion-option>
+            <ion-option value="America">America</ion-option>
+            <ion-option value="England">England</ion-option>
             
           </ion-select>
         </ion-item>
 
       
-        <button ion-button color="secondary" secondary round (click)='load2()' >Verify</button>
+        <button ion-button color="secondary" secondary round (click)='addStudent()' >Verify</button>
   
 </ion-content>
 

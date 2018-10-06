@@ -8,6 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { WelcomePage } from '../pages/welcome/welcome';
 import { VerifyPage } from '../pages/verify/verify';
+import { FindpeoplePage } from '../pages/findpeople/findpeople';
 @Component({
   templateUrl: 'app.html'
 })

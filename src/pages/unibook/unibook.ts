@@ -3,10 +3,12 @@ import { IonicPage, NavController, NavParams, Button } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
 import { StdhomePage } from '../stdhome/stdhome';
+import { FormsModule } from '@angular/forms';
+import { AngularFireDatabase, AngularFireList,AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
 
 
-
-/**
+/** 
  * Generated class for the UnibookPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
@@ -19,13 +21,29 @@ import { StdhomePage } from '../stdhome/stdhome';
   templateUrl: 'unibook.html',
 })
 export class UnibookPage {
- 
+  name :string = "";
+  lastName:string="";
+  mobile :string = "";
+  email:string="";
+  gaming :string = "";
+  
+  students:AngularFireList<any>
+  constructor(public navCtrl: NavController, public navParams: NavParams,public atrCtrl: AlertController, afDatabase: AngularFireDatabase) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public atrCtrl: AlertController) {
-
-    console.log(navParams.get('val'));
+    this.students = afDatabase.list('/students');
   }
- 
+  addStudent(){
+    const studentRef = this.students.push({});
+    studentRef.set({
+      id:studentRef.key,
+      name: this.name,
+      email:this.email,
+      mobile:this.mobile,
+      country:this.gaming
+
+    });
+    this.load2();
+  }
   load2(){
     this.navCtrl.push( StdhomePage,{
       val: 'hello'
@@ -36,33 +54,7 @@ export class UnibookPage {
 
 
 
-  //showPrompt() {
-  //  const prompt = this.atrCtrl.create({
-   //   title: 'VERIFICATION',
-    //  message: "ENTER 6 DIGITS",
-     // inputs: [
-       // {
-         // name: 'title',
-         // placeholder: '******'
-       // },
-     // ],
-     // buttons: [
-      //  {
-        //  text: 'Cancel',
-        //  handler: data => {
-         //   console.log('Cancel clicked');
-         // }
-       // },
-       // {
-         // text: 'OK',
-         // handler: data => {
-         //   console.log('Saved clicked');
-         // }
-       // }
-     // ]
-    //});
-   // prompt.present();
- // }
+  
 
   
   
