@@ -13,37 +13,39 @@
   </ion-header>
   
 
-<ion-content class="card-background-page">
-  
-  <ion-item>
-      <ion-input type="text" placeholder="First Name"></ion-input>
-    </ion-item>
+  <ion-content class="card-background-page">
+    <ion-card>
+      <img src ="../assets/verify.jpg"style="align-items: center">
+    <ion-list>
     <ion-item>
-        <ion-input type="text" placeholder="Last Name"></ion-input>
+        <ion-input type="text" placeholder="Name" [(ngModel)]="name" ></ion-input>
       </ion-item>
-      <ion-item>
-          <ion-input type="text" placeholder="Email Address"></ion-input>
-        </ion-item>
+      
         <ion-item>
-            <ion-input type="text" placeholder="Mobile No."></ion-input>
+            <ion-input type="text" placeholder="Email Address" [(ngModel)]="email" ></ion-input>
           </ion-item>
-
-        
-      
-      
           <ion-item>
-          <ion-label>COUNTRY</ion-label>
-          <ion-select [(ngModel)]="gaming">
-            <ion-option value="ai">Pakistan</ion-option>
-            <ion-option value="np">China</ion-option>
-            <ion-option value="os">America</ion-option>
-            <ion-option value="stats">England</ion-option>
-            
-          </ion-select>
-        </ion-item>
-
-      
-      <button ion-button color="danger" round  secondary (click)='load2()' >Verify</button>
-    
-    </ion-content>
-
+              <ion-input type="text" placeholder="Mobile No." [(ngModel)]="mobile" ></ion-input>
+            </ion-item>
+  
+          
+        
+        
+            <ion-item>
+            <ion-label>COUNTRY</ion-label>
+            <ion-select [(ngModel)]="gaming">
+              <ion-option value="Pakistan">Pakistan</ion-option>
+              <ion-option value="China">China</ion-option>
+              <ion-option value="America">America</ion-option>
+              <ion-option value="England">England</ion-option>
+              
+            </ion-select>
+          </ion-item>
+  
+        
+          <button ion-button color="color"  round (click)='addTeachers()' >Verify</button>
+    </ion-list>
+    </ion-card>
+  </ion-content>
+  
+  

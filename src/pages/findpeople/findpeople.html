@@ -4,45 +4,66 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+  
+
+
+          
 <ion-header>
+     
+    <ion-navbar  color="blue">
+        <ion-toolbar>
+          
+        <button ion-button color="color5" (click)='load3()' icon-start>
+            <ion-icon name="home"></ion-icon>
 
-  <ion-navbar>
-    <ion-title>findpeople</ion-title>
-  </ion-navbar>
+          </button>
+          <button ion-button color="color5" color5 (click)='load6()' icon-start>
+              <ion-icon  name="notifications"></ion-icon>
+              
+            </button>
+            
+            <button ion-button color="color5" color5 (click)='load()' icon-start>
+                <ion-icon name="chatboxes"></ion-icon>
+            </button>
+                
+              
+              <button ion-button color="color5" color5 (click)='load2()' icon-start>
+                  <ion-icon name="md-person-add"></ion-icon>
+                  
+                </button>
+                <button ion-button color="dark" icon-start>
+                    <ion-icon name="menu"></ion-icon>
+                </button>
 
-</ion-header>
+          
+      </ion-toolbar>
+      
+    </ion-navbar>
+  </ion-header>
+  
+  
+
+
 
 
 <ion-content padding>
 
-    <button ion-button color="secondary"secondary (click)='load3()' icon-start>
-        <ion-icon name="home"></ion-icon>
-        
-      </button><button ion-button color="secondary" secondary (click)='load6()' icon-start>
-          <ion-icon name="notifications"></ion-icon>
-          
-        </button>
-        
-        <button ion-button color="secondary" secondary (click)='load()' icon-start>
-            <ion-icon name="chatboxes"></ion-icon>
-        </button>
-            
-          
-          <button ion-button color="secondary" secondary (click)='load2()' icon-start>
-              <ion-icon name="md-person-add"></ion-icon>
-              
-            </button>
-            <button ion-button color="dark" icon-start>
-                <ion-icon name="menu"></ion-icon>
-            </button>
+    
 
 
     <ion-content class="back">
-<ion-searchbar (ionInput)="getTopic($event)"></ion-searchbar>
-<ion-list>
-  <ion-item *ngfor="let topic">
-{{topic}}
-  </ion-item>
+ <ion-searchbar (ionInput)="getTopics($event)"> 
+  
+    </ion-searchbar>
+
+  
+    <ion-list>
+        <ion-item *ngFor="let topic of People">
+          {{ topic }}
+        </ion-item>
+      </ion-list>
+      
 
   <ion-card>
 

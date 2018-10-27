@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MessagerequestPage } from '../messagerequest/messagerequest';
-import { FriendrequestPage } from '../friendrequest/friendrequest';
-import { StdhomePage } from '../stdhome/stdhome';
-import { NotificationPage } from '../notification/notification';
-import { AlertController, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { Observable } from 'rxjs';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+import { TmsgPage } from '../tmsg/tmsg';
+import { TfriendPage } from '../tfriend/tfriend';
+import { ThomePage } from '../thome/thome';
 
 /**
- * Generated class for the FindpeoplePage page.
+ * Generated class for the TfindPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -17,15 +15,15 @@ import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
-  selector: 'page-findpeople',
-  templateUrl: 'findpeople.html',
+  selector: 'page-tfind',
+  templateUrl: 'tfind.html',
 })
-export class FindpeoplePage {
-  
+export class TfindPage {
+
   people 
   items : Observable<any[]>;
   constructor(public navCtrl: NavController, public navParams: NavParams,public db: AngularFireDatabase,public actionSheetCtrl: ActionSheetController) {
-    this.items =this.db.list('/students').valueChanges();
+    this.items =this.db.list('/teachers').valueChanges();
   }
   getTopics(ev: any) {
     var people = this.generatePeople();
@@ -64,20 +62,20 @@ export class FindpeoplePage {
     console.log("generate");
     return people;
   }
-  showOptions(studentId, studentName) {
+  showOptions(teachersId, teachersName) {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'What do you want to do?',
       buttons: [
         {
-          text: 'Delete Student',
+          text: 'Delete teachers',
           role: 'destructive',
           handler: () => {
-            this.removeStudent(studentId);
+            this.removeTeachers(teachersId);
           }
         },{
           text: 'Update Name',
           handler: () => {
-            this.updateStudent(studentId, studentName);
+            this.updateTeachers(teachersId, teachersName);
           }
         },{
           text: 'Cancel',
@@ -91,12 +89,12 @@ export class FindpeoplePage {
     actionSheet.present();
   }
 
-  removeStudent(studentId: string){
+  removeTeachers(teachersId: string){
     alert("delete Student");  
     //this.items.remove(studentId);
   }
 
-  updateStudent(studentId, studentName){
+  updateTeachers(teachersId, teachersName){
     alert("update called");
   }
 
@@ -108,24 +106,20 @@ export class FindpeoplePage {
 
 
 load(){
-    this.navCtrl.push( MessagerequestPage,{
+    this.navCtrl.push( TmsgPage,{
       val: 'hello'
     })
 }
 load2(){
-  this.navCtrl.push( FriendrequestPage,{
+  this.navCtrl.push( TfriendPage,{
     val: 'hello'
   })
 }
 load3(){
-this.navCtrl.push( StdhomePage,{
+this.navCtrl.push( ThomePage,{
   val: 'hello'
 })
 }
 
-load6(){
-  this.navCtrl.push(NotificationPage,{
-    val: 'hello'
-  })
-  }
 }
+

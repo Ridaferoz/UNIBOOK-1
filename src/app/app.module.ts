@@ -3,6 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { FileChooser} from '@ionic-native/file-chooser';
+// import { FilePath } from '@ionic-native/file-path';
+import { File} from '@ionic-native/file';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,6 +20,7 @@ import { AdunibookPage } from '../pages/adunibook/adunibook';
 import { UploadPage } from '../pages/upload/upload';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { TfriendPage } from '../pages/tfriend/tfriend';
+import { TfindPage} from '../pages/tfind/tfind';
 import { TmsgPage } from '../pages/tmsg/tmsg';
 import { VerifyPage } from '../pages/verify/verify';
 import {  FindpeoplePage } from '../pages/findpeople/findpeople';
@@ -25,6 +29,7 @@ import { SchedulePage } from '../pages/schedule/schedule';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import firebase from 'firebase';
 import { AngularFirestoreModule, AngularFirestore, } from 'angularfire2/firestore';
 export const firebaseConfig ={
   
@@ -51,6 +56,7 @@ export const firebaseConfig ={
     AdunibookPage,
     UploadPage,
     TfriendPage,
+    TfindPage,
     TmsgPage,
     FindpeoplePage,
     NotificationPage,
@@ -80,6 +86,7 @@ export const firebaseConfig ={
     UploadPage,
     TfriendPage,
     TmsgPage,
+    TfindPage,
     FindpeoplePage,
     NotificationPage,
     VerifyPage,
@@ -90,6 +97,9 @@ export const firebaseConfig ={
     StatusBar,
     SplashScreen,
     AngularFirestore,
+    FileChooser,
+    File,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
