@@ -1,6 +1,11 @@
 page-welcome
   
  {
+     .tdimg
+     {
+        width: 50%;
+       height:50%;
+     }
    
 //   .bg
 //   {
@@ -9,22 +14,33 @@ page-welcome
     
   img{
     //    position: relative;
-    text-align: center;
-    align-content: center;
-    align-self: center;
+    // text-align: center;
+    // align-content: center;
+    // align-self: center;
 
-       align-items: center;
-       width: 40%;
-       height:30;
+    //    align-items: center;
+
+       width: 100%;
+       height:50%;
     
    }
+   h1{
+       height: 40;
+   }
    button{
-    margin-left: 100%;
+    //    float: right;
+       width: 10%;
+       float: left;
+    // margin-left: 100%;
     height: 50%;
     
     margin-top: 5%;
     
 }
+// .card{
+//     width: 40%;
+//     height: 30;
+// }
 
 .ii
 { 
@@ -34,8 +50,10 @@ page-welcome
     
     .firstbttn{
         text-decoration-style:double  ;
-// margin-left: 40%;
-width: 60;
+
+margin-left: 5%;
+width: 10;
+height: 20;
 
 margin-top: 10%;
 
