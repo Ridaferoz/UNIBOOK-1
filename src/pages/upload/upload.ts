@@ -76,9 +76,6 @@ export class UploadPage {
       }),
       finalize(() => this.downloadURL = this.storage.ref(path).getDownloadURL() )
     );
-
-
-    // The file's download URL
   }
 
 
