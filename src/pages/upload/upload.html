@@ -1,0 +1,61 @@
+<!-- // Header -->
+<ion-header>
+
+  <ion-navbar color="color">
+    <ion-toolbar>
+
+      <button ion-button color="color5" (click)='load3()' icon-start>
+        <ion-icon name="home"></ion-icon>
+
+      </button>
+      <button ion-button color="color5" color5 (click)='load6()' icon-start>
+        <ion-icon name="notifications"></ion-icon>
+
+      </button>
+
+      <button ion-button color="color5" color5 (click)='load()' icon-start>
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+
+
+      <button ion-button color="color5" color5 (click)='load2()' icon-start>
+        <ion-icon name="md-person-add"></ion-icon>
+
+      </button>
+      <button ion-button color="dark" icon-start>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+
+    </ion-toolbar>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <ion-item>
+    <ion-label floating>Share Content</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-label stacked>Upload Image</ion-label>
+    <ion-input type="file" (change)="startUpload($event.target.files)"></ion-input>
+  </ion-item>
+<br/>
+
+
+  <!-- <button class="firstbtn"ion-button color="color" round (click)="choose()" >UPLOAD A FILE</button>
+            -->
+  <!-- <button ion-button block (click)="choose()">upload a file</button> -->
+
+  <div *ngIf="downloadURL | async as url">
+    <h3>Results!</h3>
+    <img [src]="url">
+    <br>
+    <a [href]="url" target="_blank" rel="noopener">Download Me!</a>
+  </div>
+
+</ion-content>

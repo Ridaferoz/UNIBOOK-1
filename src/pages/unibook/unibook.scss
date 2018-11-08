@@ -1,0 +1,38 @@
+page-unibook {
+
+    .bg
+    {
+        background: linear-gradient(to bottom, #C0C0C0	 0%, #000080 100% )
+    }
+    .card-background-page {
+    
+            
+    
+
+        ion-card {
+          position: relative;
+          text-align: center;
+          width: 30%;
+          height: 90%;
+          margin-left: 30%;
+        
+          
+          
+        }
+      
+       h3{
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       img{
+        //    position: relative;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+    
+           align-items: center;
+           width: 50%;
+           height:40;
+           margin-right: 50;
+       }
+    }
+}
